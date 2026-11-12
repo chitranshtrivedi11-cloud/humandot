@@ -11,12 +11,12 @@
 #ld.out{opacity:0;visibility:hidden}
 #ld .in{display:grid;justify-items:center;gap:18px;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
 #ld svg{width:56px;height:56px;animation:ldmoon 1.6s ease-in-out infinite}
-#ld .bar{position:relative;width:132px;height:3px;border-radius:3px;background:color-mix(in srgb,currentColor 18%,transparent);overflow:hidden}
-#ld .bar i{position:absolute;inset:0 auto 0 0;width:40%;border-radius:3px;background:currentColor;animation:ldbar 1.2s cubic-bezier(.77,0,.175,1) infinite}
+#ld .ldb{position:relative;width:132px;height:3px;border-radius:3px;background:color-mix(in srgb,currentColor 18%,transparent);overflow:hidden}
+#ld .ldb i{position:absolute;inset:0 auto 0 0;width:40%;border-radius:3px;background:currentColor;animation:ldbar 1.2s cubic-bezier(.77,0,.175,1) infinite}
 @keyframes ldmoon{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
 @keyframes ldbar{from{transform:translateX(-110%)}to{transform:translateX(260%)}}
 @keyframes ldauto{to{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){#ld svg,#ld .bar i{animation:none}}
+@media (prefers-reduced-motion:reduce){#ld svg,#ld .ldb i{animation:none}}
 </style>
 
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -601,7 +601,7 @@ body.case-open .avail,body.play-open .avail{display:none}
 
 </head>
 <body>
-<div id="ld" role="status" aria-live="polite"><div class="in"><svg viewBox="0 0 11 11" shape-rendering="crispEdges" fill="currentColor" aria-hidden="true"><path d="M4 0h4v1H4zM2 1h3v1H2zM1 2h3v1H1zM1 3h2v1H1zM0 4h3v3H0zM1 7h2v1H1zM1 8h3v1H1zM2 9h4v1H2zM4 10h4v1H4zM7 8h3v1H7zM6 9h3v1H6z"/></svg><span class="bar"><i></i></span><span>Placing pixels</span></div></div>
+<div id="ld" role="status" aria-live="polite"><div class="in"><svg viewBox="0 0 11 11" shape-rendering="crispEdges" fill="currentColor" aria-hidden="true"><path d="M4 0h4v1H4zM2 1h3v1H2zM1 2h3v1H1zM1 3h2v1H1zM0 4h3v3H0zM1 7h2v1H1zM1 8h3v1H1zM2 9h4v1H2zM4 10h4v1H4zM7 8h3v1H7zM6 9h3v1H6z"/></svg><span class="ldb"><i></i></span><span>Placing pixels</span></div></div>
 <script>addEventListener('load',function(){var d=document.getElementById('ld');if(!d)return;var go=function(){d.classList.add('out');setTimeout(function(){d.remove()},600)};var f=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();f.then(function(){setTimeout(go,200)},go);});</script>
 <div class="topbar">
 <header class="bar glass" aria-label="Main">
